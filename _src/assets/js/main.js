@@ -9,6 +9,7 @@ const alert = document.querySelector(".alert");
 const handleFunction = ev => {
   ev.preventDefault();
   showMessage();
+  updateCounter();
   console.log(`Mi número aleatorio es ${myRandomNumber}`);
 };
 
@@ -26,11 +27,16 @@ const showMessage = () => {
   let inputValue = parseInt(input.value);
   if (inputValue === myRandomNumber) {
     write(alert, "¡HAS GANADO, CAMPEONA!");
-  } else if (inputValue > myRandomNumber) {
-    write(alert, "demasiado alto");
-  } else {
-    write(alert, "demasiado bajo");
+  } else if (inputValue > myRandomNumber || inputValue < 0) {
+    write(alert, "El número tiene que ser mayor que 0 y menor que 100");
   }
+};
+
+let counter = 0;
+
+const updateCounter = () => {
+  counter = counter + 1;
+  write(number, counter);
 };
 
 btn.addEventListener("click", handleFunction);
