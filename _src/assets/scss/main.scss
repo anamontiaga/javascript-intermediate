@@ -4,3 +4,33 @@ body {
   margin: 0;
   height: 100vh;
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.number {
+  font-size: 24px;
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+.input {
+  border: 1px solid grey;
+  height: 20px;
+}
+
+.btn {
+  border: 2px solid blue;
+  margin-top: 20px;
+}
+.alert {
+  margin-top: 50px;
+  color: #d4af37;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
